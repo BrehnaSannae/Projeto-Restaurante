@@ -639,12 +639,12 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         // TODO add your handling code here:
         String Observação = jTextFieldObservação.getText();
         int selectedIndex = jListPedidos.getSelectedIndex();
-        //DefaultListModel Pratos = (DefaultListModel) jListPedidos.getModel();
         if ((selectedIndex != -1)&(jTextFieldObservação!=null )){
                       Observações.addElement(Observação);  
-                      Pratos.addElement(Pedidos.get(selectedIndex)); 
+                      Pratos.addElement(Pedidos.get(selectedIndex));
         }
         jTextFieldObservação.setText("");
+        
         
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
