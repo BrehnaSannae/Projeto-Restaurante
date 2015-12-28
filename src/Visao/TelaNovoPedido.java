@@ -16,6 +16,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         private DefaultListModel Pedidos = new DefaultListModel();
         private DefaultListModel Quantidades = new DefaultListModel();
         private DefaultListModel Observações = new DefaultListModel();
+        private DefaultListModel Pratos = new DefaultListModel();
 
 
     /**
@@ -26,6 +27,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         initComponents();
         jListPedidos.setModel(Pedidos);
         jListQuantidades.setModel(Quantidades);
+        jListPratos.setModel(Pratos);
         jListObservações.setModel(Observações);
     }
 
@@ -110,6 +112,8 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         jTextFieldObservação = new javax.swing.JTextField();
         jButtonAdicionar = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
+        jListPratos = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
         jListObservações = new javax.swing.JList<>();
 
         jLabel3.setText("Quantidade:");
@@ -439,10 +443,15 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         getContentPane().add(jButtonAdicionar);
         jButtonAdicionar.setBounds(660, 420, 90, 30);
 
-        jScrollPane3.setViewportView(jListObservações);
+        jScrollPane3.setViewportView(jListPratos);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(430, 460, 120, 180);
+        jScrollPane3.setBounds(430, 460, 110, 180);
+
+        jScrollPane4.setViewportView(jListObservações);
+
+        getContentPane().add(jScrollPane4);
+        jScrollPane4.setBounds(550, 460, 200, 180);
 
         setSize(new java.awt.Dimension(779, 719));
         setLocationRelativeTo(null);
@@ -601,6 +610,11 @@ public class TelaNovoPedido extends javax.swing.JFrame {
        if (selectedIndex3 != -1) {
        Observações.remove(selectedIndex3);
     } 
+       DefaultListModel Pratos = (DefaultListModel) jListPratos.getModel();
+       int selectedIndex4 = jListPratos.getSelectedIndex();
+       if (selectedIndex4 != -1) {
+       Pratos.remove(selectedIndex4);
+    }
     }
     
     private void jToggleButtonConcluirPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonConcluirPedidoActionPerformed
@@ -624,8 +638,11 @@ public class TelaNovoPedido extends javax.swing.JFrame {
     private void jButtonAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarActionPerformed
         // TODO add your handling code here:
         String Observação = jTextFieldObservação.getText();
-        if ( jTextFieldObservação!=null ){
-                      Observações.addElement(Observação);                    
+        int selectedIndex = jListPedidos.getSelectedIndex();
+        //DefaultListModel Pratos = (DefaultListModel) jListPedidos.getModel();
+        if ((selectedIndex != -1)&(jTextFieldObservação!=null )){
+                      Observações.addElement(Observação);  
+                      Pratos.addElement(Pedidos.get(selectedIndex)); 
         }
         jTextFieldObservação.setText("");
         
@@ -715,10 +732,12 @@ public class TelaNovoPedido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabellQuantidade13;
     private javax.swing.JList<String> jListObservações;
     private javax.swing.JList jListPedidos;
+    private javax.swing.JList<String> jListPratos;
     private javax.swing.JList jListQuantidades;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextFieldNumeroMesa;
     private javax.swing.JTextField jTextFieldObservação;
