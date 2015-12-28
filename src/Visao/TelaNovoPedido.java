@@ -442,7 +442,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jListObservações);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(430, 460, 320, 180);
+        jScrollPane3.setBounds(430, 460, 120, 180);
 
         setSize(new java.awt.Dimension(779, 719));
         setLocationRelativeTo(null);
