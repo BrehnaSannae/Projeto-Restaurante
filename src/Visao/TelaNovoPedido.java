@@ -386,7 +386,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jListPedidos);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(428, 118, 220, 250);
+        jScrollPane1.setBounds(428, 118, 220, 260);
 
         jLabel1.setBackground(new java.awt.Color(153, 153, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -405,7 +405,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jListQuantidades);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(666, 118, 84, 250);
+        jScrollPane2.setBounds(666, 118, 84, 260);
 
         jToggleButtonRemoverItem.setText("Remover Item");
         jToggleButtonRemoverItem.addActionListener(new java.awt.event.ActionListener() {
@@ -414,7 +414,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButtonRemoverItem);
-        jToggleButtonRemoverItem.setBounds(440, 650, 110, 23);
+        jToggleButtonRemoverItem.setBounds(430, 650, 130, 23);
 
         jToggleButtonConcluirPedido.setText("Concluir Pedido");
         jToggleButtonConcluirPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -423,7 +423,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButtonConcluirPedido);
-        jToggleButtonConcluirPedido.setBounds(630, 650, 130, 23);
+        jToggleButtonConcluirPedido.setBounds(590, 650, 140, 23);
 
         jLabel4.setBackground(new java.awt.Color(153, 153, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -446,12 +446,12 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jListPratos);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(430, 460, 110, 180);
+        jScrollPane3.setBounds(430, 460, 130, 180);
 
         jScrollPane4.setViewportView(jListObservações);
 
         getContentPane().add(jScrollPane4);
-        jScrollPane4.setBounds(550, 460, 200, 180);
+        jScrollPane4.setBounds(570, 460, 180, 180);
 
         setSize(new java.awt.Dimension(779, 722));
         setLocationRelativeTo(null);
