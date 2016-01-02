@@ -642,7 +642,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         if ((selectedIndex != -1)&(jTextFieldObservação!=null )){
                       Observações.addElement(Observação);  
                       Pratos.addElement(Pedidos.get(selectedIndex));
-                      jListPedidos.setSelectionMode(-1); 
+                      jListPedidos.clearSelection();
         }
         jTextFieldObservação.setText("");
         
