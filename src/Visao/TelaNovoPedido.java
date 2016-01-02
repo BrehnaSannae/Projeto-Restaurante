@@ -414,7 +414,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButtonRemoverItem);
-        jToggleButtonRemoverItem.setBounds(460, 650, 120, 23);
+        jToggleButtonRemoverItem.setBounds(440, 650, 110, 23);
 
         jToggleButtonConcluirPedido.setText("Concluir Pedido");
         jToggleButtonConcluirPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -423,7 +423,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jToggleButtonConcluirPedido);
-        jToggleButtonConcluirPedido.setBounds(620, 650, 130, 23);
+        jToggleButtonConcluirPedido.setBounds(630, 650, 130, 23);
 
         jLabel4.setBackground(new java.awt.Color(153, 153, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -453,7 +453,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         getContentPane().add(jScrollPane4);
         jScrollPane4.setBounds(550, 460, 200, 180);
 
-        setSize(new java.awt.Dimension(779, 719));
+        setSize(new java.awt.Dimension(779, 722));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -642,6 +642,7 @@ public class TelaNovoPedido extends javax.swing.JFrame {
         if ((selectedIndex != -1)&(jTextFieldObservação!=null )){
                       Observações.addElement(Observação);  
                       Pratos.addElement(Pedidos.get(selectedIndex));
+                      jListPedidos.setSelectionMode(-1); 
         }
         jTextFieldObservação.setText("");
         
